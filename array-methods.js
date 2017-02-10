@@ -11,7 +11,7 @@ var hundredThousandairs = dataset.bankBalances.filter((element, index, array) =>
   return element.amount > 100000;
 });
 
-console.log(hundredThousandairs);
+// console.log(hundredThousandairs);
 
 /*
   set a new key for each object in bankBalances named `rounded`
@@ -24,7 +24,14 @@ console.log(hundredThousandairs);
     }
   assign the resulting array to `roundedDollar`
 */
-var roundedDollar = null;
+var roundedDollar = dataset.bankBalances.map((element, index, array) => {
+
+  return {
+      amount: element.amount,
+      state: element.state,
+      rounded: Math.round(element.amount)
+    };
+});
 
 /*
   set a the `amount` value for each object in bankBalances
