@@ -120,7 +120,6 @@ var sumOfHighInterests = sumOfHighInterests = dataset.bankBalances.filter((eleme
 })
 .map((element, index, array) => {
       return {
-      amount: element.amount,
       state: element.state,
       interest: element.amount * 0.189
     };
